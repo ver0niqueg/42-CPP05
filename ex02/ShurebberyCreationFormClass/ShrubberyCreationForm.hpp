@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 15:06:02 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 15:23:35 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/04 15:37:36 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define SHRUBBERYCREATIONFORM_HPP
 
 #include "../AFormClass/AForm.hpp"
+
+class Form; 
 
 class ShrubberyCreationForm : public AForm
 {
@@ -27,6 +29,8 @@ class ShrubberyCreationForm : public AForm
         ~ShrubberyCreationForm();
         
         void execute(Bureaucrat const &executor);
+
+        std::string getTarget();
 };
 
 #endif
