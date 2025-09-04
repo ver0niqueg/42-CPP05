@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 17:02:03 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 13:56:38 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/04 14:53:25 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,39 +20,39 @@ class Bureaucrat;
 
 class Form
 {
-    private:
-        const std::string _name;
-        bool _signed;
-        const int _gradeToSign;
-        const int _gradeToExecute;
-    
-    public:
-        Form();
-        Form(std::string name, const int gradeToSign, const int gradeToExecute);
-        Form(const Form &copy);
-        Form &operator=(const Form &other);
-        ~Form();
+	private:
+		const std::string _name;
+		bool _signed;
+		const int _gradeToSign;
+		const int _gradeToExecute;
+	
+	public:
+		Form();
+		Form(std::string name, const int gradeToSign, const int gradeToExecute);
+		Form(const Form &copy);
+		Form &operator=(const Form &other);
+		~Form();
 
-        // getters
-        const std::string  &getName() const;
-        int getGrade() const;
-        bool getSigned() const;
-        int getGradeToSign() const;
-        int getGradeToExecute() const;
+		// getters
+		const std::string  &getName() const;
+		int getGrade() const;
+		bool getSigned() const;
+		int getGradeToSign() const;
+		int getGradeToExecute() const;
 
-        void beSigned(const Bureaucrat& bureaucrat);
-        
-        // exceptions
-        class GradeTooHighException : public std::exception
-        {
-            public:
-                virtual const char* what() const throw();
-        };
-        class GradeTooLowException : public std::exception
-        {
-            public:
-                virtual const char* what() const throw();      
-        };
+		void beSigned(const Bureaucrat& bureaucrat);
+		
+		// exceptions
+		class GradeTooHighException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+		class GradeTooLowException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();      
+		};
 };
 
 std::ostream &operator<<(std::ostream &flux, const Form &myObject);

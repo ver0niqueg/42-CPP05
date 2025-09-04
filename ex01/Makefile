@@ -1,5 +1,5 @@
 # Program name
-NAME = Bureaucrat
+NAME = Form
 
 # Compiler and flags
 CC = c++
@@ -16,6 +16,7 @@ BLUE   = \033[34m
 # Source files
 SRCS = main.cpp \
 		BureaucratClass/Bureaucrat.cpp \
+		FormClass/Form.cpp \
 
 # Object files inside obj/
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)

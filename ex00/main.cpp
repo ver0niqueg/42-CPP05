@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 15:06:30 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/03 16:54:42 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/04 13:54:56 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,5 @@ int main()
 	{
 		std::cerr << "Exception: " << e.what() << std::endl;
 	}
-
 	return 0;
 }
