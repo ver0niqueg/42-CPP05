@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 15:23:12 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 15:24:37 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/08 12:44:07 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 
 #include "../AFormClass/AForm.hpp"
 
+class Form; 
+
 class RobotomyRequestForm : public AForm
 {
     private:
-        const std::string _target;
+        std::string _target;
     public:
         RobotomyRequestForm();
         RobotomyRequestForm(const std::string _target);
@@ -26,7 +28,7 @@ class RobotomyRequestForm : public AForm
         RobotomyRequestForm &operator=(const RobotomyRequestForm &other);
         ~RobotomyRequestForm();
         
-        void execute(Bureaucrat const &executor);
+        void execute(Bureaucrat const &executor) const;
 };
 
 #endif

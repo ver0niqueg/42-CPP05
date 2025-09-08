@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 15:25:13 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 15:26:07 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/08 12:43:52 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 
 #include "../AFormClass/AForm.hpp"
 
+class Form; 
+
 class PresidentialPardonForm : public AForm
 {
     private:
-        const std::string _target;
+        std::string _target;
     public:
         PresidentialPardonForm();
         PresidentialPardonForm(const std::string _target);
@@ -26,7 +28,7 @@ class PresidentialPardonForm : public AForm
         PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
         ~PresidentialPardonForm();
         
-        void execute(Bureaucrat const &executor);
+        void execute(Bureaucrat const &executor) const;
 };
 
 #endif
