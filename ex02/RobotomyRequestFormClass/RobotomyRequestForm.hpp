@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 15:23:12 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/08 12:44:07 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/08 15:53:02 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 #define ROBOTOMYREQUESTFORM_HPP
 
 #include "../AFormClass/AForm.hpp"
+#include <cstdlib>
+#include <ctime>
 
-class Form; 
+class AForm; 
 
 class RobotomyRequestForm : public AForm
 {

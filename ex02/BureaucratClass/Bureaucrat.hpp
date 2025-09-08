@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 13:57:11 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 15:18:58 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/08 15:53:09 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #define CYAN "\033[36m"
 #define RESET "\033[0m"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -40,9 +40,9 @@ class Bureaucrat
 		void incrementGrade();
 		void decrementGrade();
 
-		void signForm(Form& Form);
+		void signForm(AForm& Form);
 
-		virtual void execute(Bureaucrat const &executor) = 0;
+		void executeForm(AForm const &form) const;
 		
 		// exceptions
 		class GradeTooHighException : public std::exception

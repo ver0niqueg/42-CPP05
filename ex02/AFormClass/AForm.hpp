@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 17:02:03 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 15:11:38 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/08 15:42:25 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ class AForm
 		int getGradeToExecute() const;
 
 		void beSigned(const Bureaucrat& bureaucrat);
+		virtual void execute(Bureaucrat const &executor) const = 0;
 		
 		// exceptions
 		class GradeTooHighException : public std::exception

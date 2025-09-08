@@ -16,7 +16,10 @@ BLUE   = \033[34m
 # Source files
 SRCS = main.cpp \
 		BureaucratClass/Bureaucrat.cpp \
-		FormClass/Form.cpp \
+		AFormClass/AForm.cpp \
+		PresidentialPardonFormClass/PresidentialPardonForm.cpp \
+		RobotomyRequestFormClass/RobotomyRequestForm.cpp \
+		ShrubberyCreationFormClass/ShrubberyCreationForm.cpp \
 
 # Object files inside obj/
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)

@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 15:06:02 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/08 12:32:00 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/08 15:52:55 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <fstream>
 #include <iostream>
 
-class Form; 
+class AForm; 
 
 class ShrubberyCreationForm : public AForm
 {

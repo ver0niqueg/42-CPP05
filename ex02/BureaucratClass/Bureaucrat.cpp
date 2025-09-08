@@ -6,12 +6,12 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 14:44:45 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 15:09:05 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/08 17:11:58 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "../FormClass/Form.hpp"
+#include "../AFormClass/AForm.hpp"
 
 Bureaucrat::Bureaucrat () : _name("default"), _grade(150)
 {
@@ -66,16 +66,16 @@ void Bureaucrat::decrementGrade()
 	++_grade;
 }
 
-void Bureaucrat::signForm(Form& Form)
+void Bureaucrat::signForm(AForm& AForm)
 {
 	try
 	{
-		Form.beSigned(*this);
-		std::cout << _name << " signed " << Form.getName() << std::endl;
+		AForm.beSigned(*this);
+		std::cout << _name << " signed " << AForm.getName() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << _name << " couldn't sign " << Form.getName() << " because " << e.what() << std::endl;
+		std::cerr << _name << " couldn't sign " << AForm.getName() << " because " << e.what() << std::endl;
 	}	
 }
 
@@ -93,4 +93,21 @@ std::ostream &operator<<(std::ostream &flux, const Bureaucrat &myObject)
 {
 	flux << myObject.getName() << ", bureaucrat grade " << myObject.getGrade();
 	return (flux);
+}
+
+void Bureaucrat::executeForm(AForm const &form) const
+{
+	try
+	{
+		{
+			form.execute(*this);
+			std::cout << _name << " executed " << form.getName();
+		}
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << _name << " couldn't execute " << form.getName()
+				<< " because " << e.what() << std::endl;
+	}
+	
 }
