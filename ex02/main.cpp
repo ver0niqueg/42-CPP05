@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 17:18:56 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/09 12:02:52 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/09 12:40:10 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,6 @@ int main()
         std::cout << CYAN << "\n=== TEST PARDON ===" << RESET << std::endl;
         vero.signForm(pardon);
         vero.executeForm(pardon);
-
-        std::cout << CYAN << "\n=== TEST FORM NON SIGNE ===" << RESET << std::endl;
-        PresidentialPardonForm notSigned("Ford Prefect");
-        vero.executeForm(notSigned);
     }
     catch (std::exception &e)
     {

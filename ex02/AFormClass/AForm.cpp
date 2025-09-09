@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 19:41:37 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/09 11:59:54 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/09 12:45:15 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,14 @@ void AForm::beSigned(const Bureaucrat &other)
     if (other.getGrade() <= _gradeToSign)
         _signed = true;
     else
+        throw GradeTooLowException();
+}
+
+void AForm::checkExecution(const Bureaucrat &executor) const
+{
+    if (!_signed)
+        throw FormNotSignedException();
+    if (executor.getGrade() > _gradeToExecute)
         throw GradeTooLowException();
 }
 

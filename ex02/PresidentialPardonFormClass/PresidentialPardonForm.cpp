@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 15:31:53 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/09 12:00:34 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/09 12:45:39 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,6 @@ PresidentialPardonForm::~PresidentialPardonForm()
 
 void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
-     if (!getSigned())
-        throw AForm::FormNotSignedException();
-    if (executor.getGrade() > this->getGradeToExecute())
-        throw GradeTooLowException();
-    std::cout << _target << " has been pardonne by Zaphod Beeblebrox." << std::endl;
+    checkExecution(executor);
+    std::cout << _target << " has been pardonned by Zaphod Beeblebrox." << std::endl;
 }
