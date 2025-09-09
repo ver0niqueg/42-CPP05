@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 12:51:21 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/08 17:43:46 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/09 12:00:18 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,9 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
-    if (!this->getSigned() || executor.getGrade() > this->getGradeToExecute())
+    if (!getSigned())
+        throw AForm::FormNotSignedException();
+    if (executor.getGrade() > this->getGradeToExecute())
         throw GradeTooLowException();
     static bool seeded = false;
     if (!seeded)

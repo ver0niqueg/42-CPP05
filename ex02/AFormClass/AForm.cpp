@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 19:41:37 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 15:11:32 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/09 11:59:54 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,14 @@ int AForm::getGradeToExecute() const
 	return (_gradeToExecute);
 }
 
-void AForm::beSigned(const Bureaucrat &bureaucrat)
+void AForm::beSigned(const Bureaucrat &other)
 {
-	if (bureaucrat.getGrade() <= _gradeToSign)
-		_signed = true;
-	else
-		throw GradeTooLowException();
+    if (_signed)
+        return;
+    if (other.getGrade() <= _gradeToSign)
+        _signed = true;
+    else
+        throw GradeTooLowException();
 }
 
 const char* AForm::GradeTooHighException::what() const throw()
@@ -80,6 +82,11 @@ const char* AForm::GradeTooHighException::what() const throw()
 const char* AForm::GradeTooLowException::what() const throw()
 {
 	return ("Grade is too low!");
+}
+
+const char* AForm::FormNotSignedException::what() const throw()
+{
+    return "Form is not signed!";
 }
 
 std::ostream &operator<<(std::ostream &flux, const AForm &myObject)

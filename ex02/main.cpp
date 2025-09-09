@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 17:18:56 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/08 17:42:35 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/09 12:02:52 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int main()
         Bureaucrat vivi("Vivi", 140);
         Bureaucrat kim("Kim", 50);
 
-        ShrubberyCreationForm shrub("home1");
-        RobotomyRequestForm robo("home2");
-        PresidentialPardonForm pardon("home3");
+        ShrubberyCreationForm shrub("garden");
+        RobotomyRequestForm robo("dog");
+        PresidentialPardonForm pardon("thief");
 
         std::cout << CYAN << "=== TEST SHRUBBERY ===" << RESET << std::endl;
         vivi.signForm(shrub);
@@ -35,6 +35,7 @@ int main()
 
         std::cout << CYAN << "\n=== TEST ROBOTOMY ===" << RESET << std::endl;
         vivi.signForm(robo);
+        vero.executeForm(robo);
         kim.signForm(robo);
         kim.executeForm(robo);
         vero.executeForm(robo);

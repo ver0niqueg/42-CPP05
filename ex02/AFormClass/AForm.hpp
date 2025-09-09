@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 17:02:03 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/08 15:42:25 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/09 11:59:44 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,11 @@ class AForm
 		{
 			public:
 				virtual const char* what() const throw();      
+		};
+		class FormNotSignedException : public std::exception
+		{
+			public:
+    			virtual const char* what() const throw();
 		};
 };
 
