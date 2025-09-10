@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 19:41:37 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/09 12:45:15 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/10 18:51:18 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ AForm::AForm() : _name("default"), _signed(false), _gradeToSign(50), _gradeToExe
 {
 }
 
-AForm::AForm(std::string name, int gradeToSign, int gradeToExecute) : _name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
+AForm::AForm(std::string name, int gradeToSign, int gradeToExecute) : _name(name), _signed(false), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
 {
 	if (_gradeToSign < 1 || _gradeToExecute < 1)
 		throw GradeTooHighException();
@@ -24,7 +24,7 @@ AForm::AForm(std::string name, int gradeToSign, int gradeToExecute) : _name(name
 		throw GradeTooLowException();
 }
 
-AForm::AForm(const AForm &copy) : _name(copy._name), _gradeToSign(copy._gradeToSign), _gradeToExecute(copy._gradeToExecute)
+AForm::AForm(const AForm &copy) : _name(copy._name), _signed(copy._signed), _gradeToSign(copy._gradeToSign), _gradeToExecute(copy._gradeToExecute)
 {     
 }
 
@@ -42,11 +42,6 @@ AForm::~AForm()
 const std::string& AForm::getName() const
 {
 	return (_name);
-}
-
-int AForm::getGrade() const
-{
-	return (_gradeToSign);
 }
 
 bool AForm::getSigned() const

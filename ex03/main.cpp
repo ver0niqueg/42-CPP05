@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 15:40:58 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/10 15:58:46 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/10 19:25:21 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,30 +21,30 @@ int main()
     try
     {
         Intern someRandomIntern;
-        Bureaucrat vero("Vero", 1);
-        Bureaucrat vivi("Vivi", 140);
-        Bureaucrat kim("Kim", 50);
+        Bureaucrat a("Vero", 1);
+        Bureaucrat b("Vivi", 140);
+        Bureaucrat c("Kim", 50);
 
         std::cout << CYAN << "=== TEST SHRUBBERY ===" << RESET << std::endl;
         AForm* shrub = someRandomIntern.makeForm("shrubbery creation", "garden");
-        vivi.signForm(*shrub);
-        vivi.executeForm(*shrub);
-        vero.executeForm(*shrub);
+        b.signForm(*shrub);
+        b.executeForm(*shrub);
+        a.executeForm(*shrub);
         delete shrub;
 
         std::cout << CYAN << "\n=== TEST ROBOTOMY ===" << RESET << std::endl;
         AForm* robo = someRandomIntern.makeForm("robotomy request", "dog");
-        vivi.signForm(*robo);
-        vero.executeForm(*robo);
-        kim.signForm(*robo);
-        kim.executeForm(*robo);
-        vero.executeForm(*robo);
+        b.signForm(*robo);
+        a.executeForm(*robo);
+        c.signForm(*robo);
+        c.executeForm(*robo);
+        a.executeForm(*robo);
         delete robo;
 
         std::cout << CYAN << "\n=== TEST PARDON ===" << RESET << std::endl;
         AForm* pardon = someRandomIntern.makeForm("presidential pardon", "thief");
-        vero.signForm(*pardon);
-        vero.executeForm(*pardon);
+        a.signForm(*pardon);
+        a.executeForm(*pardon);
         delete pardon;
 
         std::cout << CYAN << "\n=== TEST INVALID FORM ===" << RESET << std::endl;

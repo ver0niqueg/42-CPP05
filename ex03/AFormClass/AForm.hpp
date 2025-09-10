@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 17:02:03 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/10 15:49:13 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/10 18:51:09 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ class AForm
 
 		// getters
 		const std::string  &getName() const;
-		int getGrade() const;
 		bool getSigned() const;
 		int getGradeToSign() const;
 		int getGradeToExecute() const;
