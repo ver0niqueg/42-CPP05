@@ -1,5 +1,5 @@
 # Program name
-NAME = Form
+NAME = Intern
 
 # Compiler and flags
 CC = c++
@@ -20,6 +20,7 @@ SRCS = main.cpp \
 		PresidentialPardonFormClass/PresidentialPardonForm.cpp \
 		RobotomyRequestFormClass/RobotomyRequestForm.cpp \
 		ShrubberyCreationFormClass/ShrubberyCreationForm.cpp \
+		InternClass/Intern.cpp \
 
 # Object files inside obj/
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)

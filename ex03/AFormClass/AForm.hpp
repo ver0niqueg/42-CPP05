@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 17:02:03 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/09 12:44:45 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/10 15:49:13 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class AForm
 		AForm(std::string name, const int gradeToSign, const int gradeToExecute);
 		AForm(const AForm &copy);
 		AForm &operator=(const AForm &other);
-		~AForm();
+		virtual ~AForm();
 
 		// getters
 		const std::string  &getName() const;
