@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 15:06:30 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/10 16:54:13 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/10 18:29:26 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main()
 	}
 	catch (const std::exception& e) 
 	{
-		std::cerr << "Exception: " << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << CYAN << "\n==== SECOND TEST ====" << RESET << std::endl;
@@ -47,7 +47,7 @@ int main()
 	}
 	catch (const std::exception& e) 
 	{
-		std::cerr << "Exception: " << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << CYAN << "\n==== THIRD TEST ====" << RESET << std::endl;
@@ -62,7 +62,7 @@ int main()
 	}
 	catch (const std::exception& e) 
 	{
-		std::cerr << "Exception: " << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << CYAN << "\n==== FOURTH TEST ====" << RESET << std::endl;
@@ -74,7 +74,7 @@ int main()
 	}
 	catch (const std::exception& e) 
 	{
-		std::cerr << "Exception: " << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	return 0;
 }

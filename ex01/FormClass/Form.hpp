@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 17:02:03 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 14:53:25 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/10 18:04:22 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,12 @@ class Form
 		Form &operator=(const Form &other);
 		~Form();
 
-		// getters
 		const std::string  &getName() const;
-		int getGrade() const;
 		bool getSigned() const;
 		int getGradeToSign() const;
 		int getGradeToExecute() const;
-
 		void beSigned(const Bureaucrat& bureaucrat);
 		
-		// exceptions
 		class GradeTooHighException : public std::exception
 		{
 			public:
