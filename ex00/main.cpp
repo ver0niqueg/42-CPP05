@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 15:06:30 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/04 13:54:56 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/10 16:54:13 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
 	try 
 	{
 		Bureaucrat a("Vero", 2);
-		std::cout << a << std::endl;
+		std::cout << a<< std::endl;
 
 		a.incrementGrade();
 		std::cout << "After grade up: " << a << std::endl;
@@ -65,6 +65,8 @@ int main()
 		std::cerr << "Exception: " << e.what() << std::endl;
 	}
 
+	std::cout << CYAN << "\n==== FOURTH TEST ====" << RESET << std::endl;
+	
 	try 
 	{
 		Bureaucrat d("Yasmine", 0);
