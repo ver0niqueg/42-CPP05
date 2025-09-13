@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 17:02:03 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/10 18:51:09 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/13 16:00:26 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,14 @@ class AForm
 		AForm &operator=(const AForm &other);
 		virtual ~AForm();
 
-		// getters
 		const std::string  &getName() const;
 		bool getSigned() const;
 		int getGradeToSign() const;
 		int getGradeToExecute() const;
-
 		void beSigned(const Bureaucrat& bureaucrat);
 		void checkExecution(const Bureaucrat &executor) const;
 		virtual void execute(Bureaucrat const &executor) const = 0;
 		
-		// exceptions
 		class GradeTooHighException : public std::exception
 		{
 			public:
