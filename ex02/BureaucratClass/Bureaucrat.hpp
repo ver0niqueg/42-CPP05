@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 13:57:11 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/08 15:53:09 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/13 15:08:58 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,11 @@ class Bureaucrat
 
 		const std::string &getName() const;
 		int getGrade() const;
-		
 		void incrementGrade();
 		void decrementGrade();
-
 		void signForm(AForm& Form);
-
 		void executeForm(AForm const &form) const;
 		
-		// exceptions
 		class GradeTooHighException : public std::exception
 		{
 			public:
@@ -58,7 +54,6 @@ class Bureaucrat
 		};
 };
 
-// surcharge de l'operateur << pour pouvoir afficher un objet Bureaucrat avec std::cout
 std::ostream &operator<<(std::ostream &flux, const Bureaucrat &myObject);
 
 #endif

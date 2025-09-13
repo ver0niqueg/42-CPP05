@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 15:29:45 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/09 12:45:55 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/13 15:13:38 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Shrubbery", 145, 137), _
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string target) : AForm("Shrubbery", 145, 137), _target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : AForm("Shrubbery", 145, 137), _target(target)
 {
 }
 
