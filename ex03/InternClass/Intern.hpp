@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 13:48:01 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/13 16:56:59 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/13 19:48:57 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 class Intern
 {
     private:
-        typedef AForm* (*FormCreator)(const std::string&);
+        typedef AForm* (Intern::*FormCreator)(const std::string&);
         
-        static AForm* createShrubbery(const std::string &target);
-        static AForm* createRobotomy(const std::string &target);
-        static AForm* createPresidentialPardon(const std::string &target);
+        AForm* createShrubbery(const std::string &target);
+        AForm* createRobotomy(const std::string &target);
+        AForm* createPresidentialPardon(const std::string &target);
         
     public:
         Intern();
@@ -37,7 +37,7 @@ class Intern
                 const char* what() const throw();
         };
 
-        AForm* makeForm(std::string form, std::string target);
+        AForm* makeForm(const std::string &form, const std::string &target);
 };
 
 #endif

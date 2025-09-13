@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 13:56:27 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/10 15:52:07 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/13 19:49:24 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ const char* Intern::FormNotFoundException::what() const throw()
     return "Intern: Form not found!";
 }
 
-AForm* Intern::makeForm(std::string form, std::string target)
+AForm* Intern::makeForm(const std::string &form, const std::string &target)
 {
     struct FormType
     {
@@ -70,10 +70,10 @@ AForm* Intern::makeForm(std::string form, std::string target)
     };
     for (size_t i = 0; i < sizeof(forms) / sizeof(forms[0]); ++i)
     {
-        if (form.compare(forms[i].name) == 0)
+        if (form == forms[i].name)
         {
             std::cout << "Intern creates " << form << std::endl;
-            return forms[i].createFunction(target);   
+            return (this->*forms[i].createFunction)(target);   
         }
     }
     throw FormNotFoundException();
