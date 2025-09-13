@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 15:06:02 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/13 15:13:46 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/13 15:14:39 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ShrubberyCreationForm : public AForm
 {
     private:
         std::string _target;
+        
     public:
         ShrubberyCreationForm();
         ShrubberyCreationForm(const std::string &target);

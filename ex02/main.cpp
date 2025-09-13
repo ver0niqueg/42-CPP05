@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 17:18:56 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/10 19:24:41 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/13 15:54:02 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,16 @@ int main()
         ShrubberyCreationForm shrub("garden");
         RobotomyRequestForm robo("dog");
         PresidentialPardonForm pardon("thief");
+        
+        std::cout << a << std::endl;
+        std::cout << b << std::endl;
+        std::cout << c << std::endl;
 
-        std::cout << CYAN << "=== TEST SHRUBBERY ===" << RESET << std::endl;
+        std::cout << shrub << std::endl;
+        std::cout << robo << std::endl;
+        std::cout << pardon << std::endl;
+
+        std::cout << CYAN << "\n=== TEST SHRUBBERY ===" << RESET << std::endl;
         b.signForm(shrub);
         b.executeForm(shrub);
         a.executeForm(shrub);
