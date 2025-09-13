@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 15:06:30 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/13 14:26:43 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/13 14:42:20 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,5 @@ int main()
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	return 0;
+	return (0);
 }
