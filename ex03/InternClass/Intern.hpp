@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 13:48:01 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/13 19:48:57 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/24 13:41:33 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Intern
         class FormNotFoundException : public std::exception
         {
             public:
-                const char* what() const throw();
+                virtual const char* what() const throw();
         };
 
         AForm* makeForm(const std::string &form, const std::string &target);
